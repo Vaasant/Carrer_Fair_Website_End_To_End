@@ -1,0 +1,28 @@
+<!-- <!DOCTYPE html> -->
+
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <!-- header start --------------------------------------------------------->
+    <header>
+
+
+
+    <% if(session==undefined){%>
+
+        <a href="/"><img class="indeximg Logoimg" src="../assets/images/CarrerFair.jfif" alt="CarrerFair" ></a>
+          <nav class="navBar">
+            <a class=" clr change" href="../login" >Start New Connection    </a>&nbsp;|
+            <a class="clr change" href="../login" >          Login     </a>&nbsp;|
+            <a class="clr change" href="../signup">          Sign Up</a>
+          </nav>
+        <% }%>
+
+    <% if(session){%>
+      <a href="/"><img class="indeximg Logoimg" src="../assets/images/CarrerFair.jfif" alt="CarrerFair" ></a>
+        <nav class="navBar">
+          <a class=" clr change" href="../newConnection" >Start New Connection    </a>&nbsp;|
+          <a class="clr change" href="../savedConnections/logout" >Logout</a>&nbsp;|
+          <a class="clr change" href="../savedConnections">My connections</a>
+        </nav>
+        <% }%>
+            </header>
+    <!-- header end --------------------------------------------------------->

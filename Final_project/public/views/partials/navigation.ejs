@@ -1,0 +1,20 @@
+
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  
+    <!-- navigaion start ------------------------------------------------------>
+    <%if(session==undefined){%>
+      <nav class="darkbackground">
+        <a class="clr" href="../connections" >Companies</a>
+        <a href="#"></a>
+      </nav>
+    <%}%>
+
+    <%if(session){%>
+      <nav class="darkbackground">
+        <a class="clr" href="../connections" >Companies</a>
+        <a  class="welcome" href="#">  Welcome <%=session.firstName%> </a>
+      </nav>
+    <%}%>
+
+
+    <!-- navigaion end -------------------------------------------------------->

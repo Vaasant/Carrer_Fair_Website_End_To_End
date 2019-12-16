@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carrer Fair</title>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  </head>
+  <body>
+<!-- header start ------------------------------------------------------------->
+    <% include partials/header.ejs %>
+
+
+<!-- header end ------------------------------------------------------------->
+<!-- nav start ------------------------------------------------------------->
+
+    <% include partials/navigation.ejs %>
+<!-- nav end ------------------------------------------------------------->
+
+      <h1 class="headingLarge">
+        <span class="border orangeclr">Welcome to "Carrer Search" Login with UserID</span>
+      </h1>
+<!-- card for main content start ------------------------------------------------>
+      <div class="icardlogin" >
+
+<!-- main content start ------------------------------------------------------->
+    <%
+    if(error){
+    error.forEach(function(item){%>
+        <div class="logininvalid"><%=item.msg %></div>
+        <%});} %>
+        <%if(notValid){%>
+            <div class="logininvalid">
+              Username or Password is Not valid
+            </div>
+
+        <%}%>
+        <main >
+          <div >
+            <form method="post" action="../savedConnections/login?action=signIn">
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="username"  class=" loginNameClr">USERID</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required name="username" placeholder="username">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="password" class="loginNameClr " >PASSWORD</label>
+                </div>
+                <div class="col-75 ">
+                  <input type="password" class="passwordwidth" required  name="password" placeholder="password">
+                </div>
+              </div>
+
+
+
+
+
+
+
+              <div class="row">
+                <input type="submit"  value="Submit">
+              </div>
+
+            </form>
+          </div>
+        </main>
+<!-- main content end ----------------------------------------------------------------->
+      </div>
+<!-- card for main content end --------------------------------------------------------->
+
+<!-- aside start ----------------------------------------------------------------------->
+
+<!-- aside end -->
+
+<!-- footer start -->
+    <% include partials/footer.ejs %>
+<!-- footer end -->
+  </body>
+</html>

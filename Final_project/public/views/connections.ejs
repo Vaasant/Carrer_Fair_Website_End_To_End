@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carrer Fair</title>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  </head>
+  <body>
+    <!-- header start --------------------------------------------------------->
+        <% include partials/header.ejs %>
+
+    <!-- header end ----------------------------------------------------------->
+    <!-- navigation start ----------------------------------------------------->
+    <% include partials/navigation.ejs %>
+    <!-- navigation end ----------------------------------------------------->
+
+
+<!-- cards start -->
+    <!-- Type of job card start  ----------------------------------------------->
+
+  
+
+
+    <% for(j=0;j<=uniqueJob.length-1 ;j++){ %>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- card front start ---------------------------------------------->
+                <div class="flip-card-front">
+                    <div class="backGroundBlack" >
+                      Move the cursor on to the card for categories of &nbsp;&nbsp;&nbsp; <%=uniqueJob[j]%> &nbsp;&nbsp;&nbsp; Job companies
+                    </div>
+                    <main class="connectionsmain">
+                      <div class="component">
+                        <%if(uniqueJob[j]!='INTERNSHIP' && uniqueJob[j]!='FULLTIME'){%>
+                          <img class="contract" src="../assets/images/contract.png" alt="fullTime" >
+                        <%}%>
+                        <% if(uniqueJob[j]=='INTERNSHIP' || uniqueJob[j]=='FULLTIME'){%>
+                          <img class="imginternship" src="../assets/images/<%=uniqueJob[j]%>.jfif" alt="fullTime" >
+                        <%}%>
+                      </div>
+                    </main>
+                </div>
+        <!-- card front end ---------------------------------------------->
+        <!-- card back start ---------------------------------------------->
+                <div class="flip-card-back">
+                  <div class="backGroundBlack" >
+                    <%=uniqueJob[j]%>
+                  </div>
+                  <p>
+                    <% for(i=0;i<=qs.length-1;i++){
+                      if(qs[i].typeOfJob==uniqueJob[j]){ %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="change tooltip" href="../connection?ID=<%= qs[i].connectionID %>"><span class=" tooltiptext">For detailed information click on the link</span>-&nbsp;-&nbsp;><span class="underline"> <%= qs[i].companyName %> </span></a><br><br>
+                    <%  } %>
+                    <%} %>
+                   </p>
+                </div>
+              </div>
+            </div>
+      <%  } %>
+  <!-- type of job card end  ----------------------------------------------->
+
+<!-- Footer start ---------------------------------------------->
+
+    <% include partials/footer.ejs %>
+<!-- Footer end ---------------------------------------------->
+  </body>
+</html>

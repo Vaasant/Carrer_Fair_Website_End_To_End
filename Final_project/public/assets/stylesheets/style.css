@@ -1,0 +1,673 @@
+body{
+
+   margin-left: auto;
+   margin-right: auto;
+   width: 1219px;
+
+
+  background-color: #c6a7a7;
+}
+
+
+
+
+article,aside,footer,header,main,section{
+    display: block;
+}
+
+header{
+      padding: 4px;
+  background-color: #9f1e1e;
+}
+
+.headingLarge{
+      padding-left: 63px;
+  font-size: -webkit-xxx-large;
+  font-style: italic;
+}
+.navBar{
+  padding: 39px;
+  float: right;
+}
+footer{
+  background-color: #581818;
+}
+
+a{
+
+  text-decoration: none;
+}
+img{
+  padding:10px;
+}
+
+.darkbackground{
+  background-color: #581818;
+}
+.withoutlogin{
+  text-align: center;
+    margin-top: 41px;
+}
+.withoutlogin:hover{
+
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+  }
+.aTagColor{
+  color:#9f0505
+}
+.clr{
+  margin:10px;
+  color: white ;
+
+}
+
+.clr:hover{
+  font-weight: bold;
+}
+
+.component{
+  text-align: justify;
+  padding: 1rem;
+font-family: "Gotham A", "Gotham B", sans-serif;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  height: 15px;
+    width: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2px;
+    color: white;
+    font-size: 14px;
+    padding-left: 4px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.dot {
+  height: 15px;
+    width: 18px;
+    background-color: #3B5998;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 603px;
+    color: white;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    font-family:monospace;
+    font-weight: bold;
+}
+.indexmain{
+  padding-left: 102px;
+  float: left;
+  width: 937px;
+}
+
+.connectionsmain{
+  width:400px;
+  float: left;
+  height: 137px;
+}
+
+footer{
+  clear: both;
+}
+
+.redclr{
+  color: #a32424;
+}
+
+/* Tooltip start
+-------------------------------> */
+
+.tooltip {
+  position: relative;
+  display: inline-block ;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #200404;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Tooltip end
+-----------------------------------------> */
+
+.underline{
+  border-bottom: 3px dotted black;
+}
+
+
+
+/* flip of card start */
+.flip-card {
+  margin-left: 80px;
+  background-color: transparent;
+  width: 367px;
+  height: 189px;
+  perspective: 1000px;
+  padding-bottom: 17px;
+}
+
+.flip-card-inner {
+  margin-top: 30px;
+  position: relative;
+  width: 200%;
+  height: 53%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 231%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color:#aa5151;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.backGroundBlack{
+  background-color: #200404;
+  color: white ;
+      font-size: x-large;
+}
+
+/* flip of card end */
+
+
+
+
+.imginternship{
+  width: 752px;
+    height: 174px;
+    margin-left: -24px;
+    margin-top: -26px;
+}
+
+.contract{
+  width: 752px;
+    height: 200px;
+    margin-left: -24px;
+    margin-top: -26px;
+}
+.newinvalid{
+
+    background-color: #c84a4a;
+    padding-left: 373px;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size:large;
+}
+.passwordwidth{
+  width: 100%;
+padding-bottom: 12px;
+padding-top: 8px;
+padding-left: 10px;
+}
+.logininvalid{
+
+    background-color: #c84a4a;
+    margin-left: 338px;
+    margin-right: 265px;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size:large;
+}
+.insertedFont{
+  background-color: #aded94;
+  padding-left: 533px;
+    margin-bottom: 23px;
+    font-weight: bold;
+    -webkit-text-emphasis: double-circle;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.insertedNOTFont{
+  background-color: #aded94;
+      padding-left: 192px;
+    margin-bottom: 23px;
+    font-weight: bold;
+    -webkit-text-emphasis: double-circle;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+.UserNotinsertedFont{
+  background-color: #e11239;
+  padding-left: 306px;
+    margin-bottom: 23px;
+    font-weight: bold;
+    -webkit-text-emphasis: double-circle;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+.UserinsertedFont{
+  background-color: #aded94;
+  padding-left: 533px;
+    margin-bottom: 23px;
+    font-weight: bold;
+    -webkit-text-emphasis: double-circle;
+    text-transform: uppercase;
+    font-size: x-large;
+}
+.orangeclr {
+    color: #6e2002;
+}
+
+.whiteclr{
+  color: white
+}
+.change{
+  color: white;
+}
+.change:hover{
+
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+  }
+
+
+.icardlogin {
+    margin-right: 230px;
+}
+.loginNameClr{
+  color:#6e2002;
+}
+/* card for index start */
+.indexcard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: justify;
+  width: 40%;
+  padding-left: 25px;
+  padding-right: 25px;
+  float: left;
+  width: 924px;
+  background-color: #ca7c7c
+}
+
+.indexcard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.icard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: justify;
+  width: 40%;
+  padding-left: 25px;
+  padding-right: 25px;
+  float: left;
+  width: 924px;
+  background-color: #ca7c7c
+}
+
+.icard:hover {
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+}
+
+
+/* card for index end */
+
+
+
+.ma{
+  margin-left: 1045px;
+}
+
+
+.Logoimg{
+  height: 80px;
+  width:127px;
+}
+
+
+
+/* connections card start */
+
+.hdTitle{
+  /* background-color: #200404; */
+  color: black;
+  font-weight: bold;
+  margin-top: 9px;
+  padding-left: 546px;
+  padding-top: 8px;
+  padding-bottom: 15px;
+  font-size: x-large;
+  font-style: italic;
+
+}
+.italic{
+  font-style: italic;
+}
+
+.border{
+  border-bottom: 3px dotted black;
+}
+
+.connectionscard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: justify;
+  float: left;
+  width: 596px;
+  height: 388px;
+  background-color: #a37a7a;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 13px;
+}
+
+.connectionscard2{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: justify;
+  float: centre;
+  width: 596px;
+  height: 388px;
+  background-color: #a37a7a;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 13px;
+  margin-left: 307px;
+
+}
+
+.companyName{
+  background-color: #412f2f;
+  color: white;
+  padding-left:260px;
+}
+
+.column1 {
+  float: left;
+  width:20%;
+}
+.column2 {
+  float: left;
+  width:45%;
+  margin-top: 10px;
+}
+.column3 {
+  float: left;
+  width:35%;
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.connectionimg{
+  width: 73px;
+  height: 68px;
+}
+
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+
+
+.button:hover{
+  color: black;
+}
+
+
+.details{
+  padding:8px;
+}
+/* connections card end */
+
+
+
+.welcome{
+  margin-right: -298px;
+    float: right;
+    color: white;
+}
+
+.notallowed{
+
+   margin: 10px;
+   color: white;
+}
+
+
+/* table for saved connection start */
+table {
+  font-family: arial, sans-serif;
+  /* border-collapse: collapse; */
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+td, th {
+  border: 2px solid #fff6f6;
+  text-align: center;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #581818;
+}
+
+
+.bold{
+  font-style: italic;
+    font-size: xx-large;
+}
+/* table for saved connection end */
+
+
+/* New connection start */
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=date]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 143px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+input[type=submit] {
+  background-color: #bc253a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: inherit;
+}
+
+.submitForm{
+  margin: inherit;
+  background-color: red;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* New connection End */
+
+/* about start */
+.statistics-row {
+    width: 19%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 16px;
+    margin-left: 9px;
+}
+
+#statistics {
+    padding: 2.5em 0 0;
+}
+#statistics .amount {
+    font-size: 40px;
+
+    font-size: 3.4vw;
+    font-weight: 700;
+    color: #2164f3;
+    line-height: 1em;
+
+}
+#statistics .label {
+    font-size: 16px;
+    margin: .9em 0;
+}
+
+.icardAbout {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: justify;
+    width: 40%;
+    padding-left: 25px;
+    padding-right: 25px;
+    float: left;
+    width: 1156px;
+    background-color: #ca7c7c;
+}
+
+.aboutHeadingLarge {
+    /* padding-left: 49px; */
+    font-size: -webkit-xxx-large;
+    font-style: italic;
+    float: centre;
+    margin-right: 534px;
+    float: right;
+}
+
+.deleteHeadingLarge {
+    /* padding-left: 49px; */
+    padding-left: 170px;
+    font-style: italic;
+    float: centre;
+}
+
+.maContact {
+    margin-left: 463px;
+}
+
+.marginForTopic{
+      margin-top: 21px;
+}
+/* about end */
+
+/* footer start */
+
+.footer{
+      margin-top: 29px;
+}
+/* footer end */

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carrer Fair</title>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  </head>
+  <body>
+<!-- header start ------------------------------------------------------------->
+    <% include partials/header.ejs %>
+
+
+<!-- header end ------------------------------------------------------------->
+<!-- nav start ------------------------------------------------------------->
+
+    <% include partials/navigation.ejs %>
+<!-- nav end ------------------------------------------------------------->
+
+      <h1 class="headingLarge">
+        <span class="border orangeclr">Registration</span>
+      </h1>
+<!-- card for main content start ------------------------------------------------>
+      <div  >
+
+<!-- main content start ------------------------------------------------------->
+
+        <main >
+
+          <%
+          if(error){
+          error.forEach(function(item){%>
+              <div class="logininvalid"><%=item.msg %></div>
+              <%});} %>
+
+          <%if(created=="no"){%>
+              <div class="UserNotinsertedFont">
+                User Id or Email address is already in use please try giving a new one
+              </div>
+
+          <%}%>
+          <%if(created=="yes"){%>
+              <div class="UserinsertedFont">
+                Account Created
+              </div>
+
+          <%}%>
+          <div class="container redclr">
+
+
+
+            <form method="post" action="../signup">
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="UserID"  >UserID</label>
+                </div>
+                <div class="col-75">
+                  <input type="text"required id="UserID" name="UserID" placeholder="Create an UserID">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="firstName">FIRST NAME</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required id="firstName" name="firstName" placeholder="Your firstName..">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="lastName">LAST NAME</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required id="lastName" name="lastName" placeholder="Your lastName..">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="emailAddress">Email</label>
+                </div>
+                <div class="col-75">
+                  <input type="email" required id="emailAddress" class="passwordwidth" name="emailAddress" placeholder="Your emailAddress..">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="password">Create a Password</label>
+                </div>
+                <div class="col-75">
+                  <input type="password" required id="password" class="passwordwidth" name="password" placeholder="Create a password..">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="address1Field">address1</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required id="address1Field" name="address1Field" placeholder="address">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="address2Field">address2</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required id="address2Field" name="address2Field" placeholder="address">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="city">City</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required id="city" name="city" placeholder="city">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="state">State</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required id="state" name="state" placeholder="state">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="postCode">postCode</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" required id="postCode" name="postCode" placeholder="postCode">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="country">Country</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="country" name="country" placeholder="Your country..">
+                </div>
+              </div>
+
+              <div class="row">
+                <input type="submit"  value="Submit">
+              </div>
+
+            </form>
+          </div>
+        </main>
+<!-- main content end ----------------------------------------------------------------->
+      </div>
+<!-- card for main content end --------------------------------------------------------->
+
+<!-- aside start ----------------------------------------------------------------------->
+
+<!-- aside end -->
+
+<!-- footer start -->
+    <% include partials/footer.ejs %>
+<!-- footer end -->
+  </body>
+</html>

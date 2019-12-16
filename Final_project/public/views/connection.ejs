@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carrer Fair</title>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  </head>
+  <body>
+
+    <!-- header start --------------------------------------------------------->
+
+        <% include partials/header.ejs %>
+
+    <!-- header end ----------------------------------------------------------->
+    <!-- navigation start ----------------------------------------------------->
+
+      <% include partials/navigation.ejs %>
+    <!-- navigation end ----------------------------------------------------->
+
+
+
+<!-- Single connections start ------------------------------------------------------>
+<%if((qs.length) == 1){%>
+
+  <%for(i=0;i<=qs.length-1;i++){%>
+          <div class="hdTitle">
+            <span class="border orangeclr italic"><%=qs[i].typeOfJob%></span>
+          </div>
+          <div class="connectionscard2">
+            <div class="companyName" >
+              <%=qs[i].companyName %>
+            </div>
+            <div class="row">
+                  <div class="column1">
+                    <img  src="<%=qs[i].imageurl%>" alt="<%=qs[i].companyName%>" class="connectionimg" >
+                  </div>
+                  <div class="column2 whiteclr">
+                    <%=qs[i].host%><br><%=qs[i].dateAndTime%> <br><%=qs[i].location%>
+                  </div>
+                  <div class="column3 whiteclr">
+                    &nbsp;&nbsp;&nbsp;&nbsp;  Ready to apply ? <br>
+                    <form method="post"  action="
+                    <%if(session==undefined){%>
+                      ../login
+                    <%}%>
+                    <%if(session!=undefined){%>
+                      ../savedConnections?ID=<%= qs[i].connectionID %>&action=save
+                    <%}%>
+                    ">
+                    <button class="button" name="formValue" value="YES" > Yes</button>
+                    <button class="button button3" id="myBtn"  name="formValue" value="NO" >No</button>
+                    <button class="button button2" name="formValue"  value="MAYBE">Maybe</button>
+                    </form>
+                    <form method="post"  action="
+                    <%if(session==undefined){%>
+                      ../login
+                    <%}%>
+                    <%if(session!=undefined){%>
+                      ../connectionUpdateDelete/updatePage?ID=<%= qs[i].connectionID %>&action=UpdateDelete
+                    <%}%>
+                    ">
+                    <button class="button" name="UPDATEFORM"  value="UPDATE">UPDATE</button>
+                    <button class="button button3" name="DELETEFORM"  value="DELETE">DELETE</button>
+
+                    </form>
+                  </div>
+            </div>
+            <div class="details">
+              <h2 class="orangeclr italic">
+                Details
+              </h2>
+              <p class="whiteclr">
+                <%=qs[i].details %>
+              </p>
+            </div>
+          </div>
+    <%} %>
+<%}%>
+<%if((qs.length) != 1){%>
+  <div class="withoutlogin">
+  <a href="../connections" class="bold border orangeclr ">Click here to Give valid companies</a>
+
+  </div>
+  <%}%>
+
+<!-- Single connections end ------------------------------------------------------>
+
+<!-- footer start ------------------------------------------------------>
+
+<% include partials/footer.ejs %>
+
+<!-- Footer end ------------------------------------------------------>
+
+  </body>
+</html>

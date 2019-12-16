@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carrer Fair</title>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  </head>
+  <body>
+    <!-- header start --------------------------------------------------------->
+
+        <% include partials/header.ejs %>
+
+
+    <!-- header end ----------------------------------------------------------->
+
+
+    <!-- navigation start ----------------------------------------------------->
+
+    <% include partials/navigation.ejs %>
+
+    <!-- navigation end ----------------------------------------------------->
+
+
+<!-- Form start -------------------------------------------------------------------->
+
+<%
+if(error){
+error.forEach(function(item){%>
+    <div class="newinvalid"><%=item.msg %></div>
+    <%});} %>
+    <div class="container redclr">
+
+          <%if(inserted){%>
+
+                <%if(inserted=="INSERTED"){%>
+                  <div class="insertedFont">
+                    <%=inserted%>
+                  </div>
+                <%}%>
+
+                <%if(inserted!="INSERTED"){%>
+                  <div class="insertedNOTFont">
+                    <%=inserted%>
+                  </div>
+                <%}%>
+
+          <%}%>
+      <form method="post" action="../connectionUpdateDelete?ID=<%=id%>&action=UpdateDone">
+
+        <div class="row">
+          <div class="col-25">
+            <label for="connectionID"  >ID</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="connectionID" disabled name="connectionID" value="<%=id%>" >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="companyName">NAME</label>
+          </div>
+          <div class="col-75">
+            <input type="text" required id="companyName" name="companyName" placeholder="Your name..">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="details">DETAILS</label>
+          </div>
+          <div class="col-75">
+            <textarea id="details" name="details" placeholder="Give description" style="height:200px"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="location">LOCATION</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="location" name="location" placeholder="Your location..">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="host">HOST</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="host" name="host" placeholder="Your location..">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="dateAndTime">DATE</label>
+          </div>
+          <div class="col-75">
+            <input type="date" id="dateAndTime" name="dateAndTime" >
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="submit"  value="Submit">
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- Footer start ------------------------------------------------------------->
+
+    <% include partials/footer.ejs %>
+
+    <!-- Footer end --------------------------------------------------------------->
+
+
+  </body>
+</html>

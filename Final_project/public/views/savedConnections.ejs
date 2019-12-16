@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carrer Fair</title>
+      <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  </head>
+  <body>
+  <!-- header start --------------------------------------------------------->
+
+  <% include partials/header.ejs %>
+
+  <!-- header end ----------------------------------------------------------->
+
+  <!-- navigation start ----------------------------------------------------->
+
+  <% include partials/navigation.ejs %>
+
+  <!-- navigation end ----------------------------------------------------->
+
+        <div >
+          <h3 class="bold"> <span class="border orangeclr">Niner's Saved Companies</span></h3>
+        </div>
+        <div >
+          <table>
+            <thead>
+
+            <tr>
+              <th class="orangeclr">Name of companies</th>
+              <th class="orangeclr">Type of Job</th>
+              <th class="orangeclr">Applied?</th>
+              <th class="orangeclr">Action</th>
+            </tr>
+          </thead>
+            <tbody>
+              <% for(var i=0; i< qs.UserConnections.length ;i++) { %>
+            <tr>
+              <td class="whiteclr"><%= qs.UserConnections[i].Connection.companyName %></td>
+              <td class="whiteclr"><%= qs.UserConnections[i].Connection.typeOfJob%>  </td>
+              <td class="whiteclr"><%= qs.UserConnections[i].RSVP%> </td>
+              <td>
+                <form method="post" >
+                <button class="button" formaction='../connection?ID=<%= qs.UserConnections[i].Connection.connectionID %>' > Update</button>
+                <button  class="button button3" formaction="savedConnections?ID=<%= qs.UserConnections[i].Connection.connectionID %>&action=delete"> Remove</button>
+
+                </form>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+
+          </table>
+        </div>
+
+<!-- Footer start ------------------------------------------------------------->
+
+  <% include partials/footer.ejs %>
+
+<!-- Footer end --------------------------------------------------------------->
+  </body>
+</html>

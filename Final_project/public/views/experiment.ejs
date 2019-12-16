@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carrer Fair</title>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+  </head>
+  <body>
+    <!-- header start --------------------------------------------------------->
+        <% include partials/header.ejs %>
+
+    <!-- header end ----------------------------------------------------------->
+    <!-- navigation start ----------------------------------------------------->
+    <% include partials/navigation.ejs %>
+    <!-- navigation end ----------------------------------------------------->
+
+
+<!-- cards start -->
+    <!-- Full time card start  ----------------------------------------------->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- card front start ---------------------------------------------->
+                <div class="flip-card-front">
+                    <div class="backGroundBlack" >
+                      Move the cursor on to the card for categories of Full Time Job companies
+                    </div>
+                    <main class="connectionsmain">
+                      <div class="component">
+                          <img class="imginternship" src="../assets/images/fullTime2.jfif" alt="fullTime" >
+                      </div>
+                    </main>
+                </div>
+        <!-- card front end ---------------------------------------------->
+        <!-- card back start ---------------------------------------------->
+                <div class="flip-card-back">
+                  <div class="backGroundBlack" >
+                    <%=qs[0].typeOfJob%>
+                  </div>
+                  <p>
+
+                    <%for(i=0;i<=qs.length-1;i++){
+                      if(qs[i].typeOfJob== "FULL TIME"){ %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="change tooltip" href="../connection?ID=<%= qs[i].connectionID %>"><span class=" tooltiptext">For detailed information click on the link</span><%=i+1%>&nbsp;-&nbsp;<span class="underline"> <%= qs[i].companyName %> </span></a><br><br>
+                    <%  } %>
+                    <%} %>
+                   </p>
+                </div>
+              </div>
+            </div>
+  <!-- Full time card end  ----------------------------------------------->
+  <!-- Internship card start  ----------------------------------------------->
+            <div class="flip-card">
+              <div class="flip-card-inner">
+  <!-- card front start ---------------------------------------------->
+                  <div class="flip-card-front">
+                    <div class="backGroundBlack" >
+                      Move the cursor on to the card for categories of Internships
+                    </div>
+                    <main class="connectionsmain">
+                      <div class="component">
+                          <img class="imginternship" src="../assets/images/internship2.jfif" alt="internship" >
+                      </div>
+                    </main>
+                  </div>
+<!-- card front end ---------------------------------------------->
+<!-- card back start ---------------------------------------------->
+                  <div class="flip-card-back">
+                    <div class="backGroundBlack" >
+                    <%=qs[5].typeOfJob%>
+                    </div>
+                    <p>
+                      <%for(i=0;i<=qs.length-1;i++){
+                        if(qs[i].typeOfJob== "INTERNSHIP"){ %>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="change tooltip" href="../connection?ID=<%= qs[i].connectionID %>"><span class=" tooltiptext">For detailed information click on the link</span><%=i-3%> &nbsp;-&nbsp;<span class="underline"><%= qs[i].companyName %></span></a><br><br>
+                      <%  } %>
+                      <%} %>
+                    </p>
+                  </div>
+<!-- card back start ------------------------------------------------------>
+            </div>
+          </div>
+<!-- cards end ------------------------------------------------------------------->
+
+<!-- Footer start ---------------------------------------------->
+
+    <% include partials/footer.ejs %>
+<!-- Footer end ---------------------------------------------->
+  </body>
+</html>
